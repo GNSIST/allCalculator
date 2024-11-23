@@ -1,0 +1,150 @@
+/* 공통 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body 스타일 */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #e6e6e6);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* 화면 전체 높이 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+    padding: 20px;
+}
+
+/* 헤더 */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 메인 영역 */
+main {
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* 최대 너비 */
+    min-height: 50vh; /* 최소 높이 50vh */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* 내용 많을 경우 세로 스크롤 */
+    flex-grow: 1;
+}
+
+/* 푸터 */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 8px 8px;
+}
+
+/* 제목 스타일 */
+h1 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 폼 요소 공통 스타일 */
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* 입력창 스타일 */
+input[type="text"], input[type="number"], select {
+    background-color: #fafafa;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #fff;
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* 결과 텍스트 */
+.result {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* 반응형 디자인 */
+@media (min-width: 768px) {
+    main {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    header, footer {
+        padding: 15px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 1rem;
+    }
+}

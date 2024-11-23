@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <link rel="stylesheet" href="../share-css/common.css">
+</head>
+<body>
+      <main>
+        <h1>월복리 계산기</h1>
+        <div class="form-group">
+            <label for="principal">투자 원금:</label>
+            <input type="number" id="principal" placeholder="원금을 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="years">기간 (년):</label>
+            <input type="number" id="years" placeholder="기간을 입력하세요 (년)">
+        </div>
+        <div class="form-group">
+            <label for="rate">월 수익률 (%):</label>
+            <input type="number" id="rate" placeholder="수익률을 입력하세요 (%)">
+        </div>
+        <button onclick="calculateMonthlyCompoundInterest()">계산하기</button>
+        <div id="result-container">
+            <table id="result-table">
+                <thead>
+                    <tr>
+                        <th>월</th>
+                        <th>금액</th>
+                    </tr>
+                </thead>
+                <tbody id="result-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 계산기 사이트
+    </footer>
+    <script src="bokri.js"></script>
+</body>
+</html>

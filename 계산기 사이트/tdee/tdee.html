@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <link rel="stylesheet" href="../share-css/common.css">
+</head>
+<body>
+    <main>
+        <h1>유지대사량 계산기</h1>
+        <div class="form-group">
+            <label for="age">나이:</label>
+            <input type="number" id="age" placeholder="나이를 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="weight">체중 (kg):</label>
+            <input type="number" id="weight" placeholder="체중을 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="height">키 (cm):</label>
+            <input type="number" id="height" placeholder="키를 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="gender">성별:</label>
+            <select id="gender">
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="activity">활동 수준:</label>
+            <select id="activity">
+                <option value="1.2">매우 적은 활동 (운동 안 함)</option>
+                <option value="1.375">가벼운 활동 (주 1-3회 운동)</option>
+                <option value="1.55">보통 활동 (주 3-5회 운동)</option>
+                <option value="1.725">강한 활동 (주 6-7회 운동)</option>
+                <option value="1.9">매우 강한 활동 (운동 선수)</option>
+            </select>
+        </div>
+        <button onclick="calculateTDEE()">계산하기</button>
+        <div id="tdeeResult" class="result"></div>
+        <div id="macros" class="result"></div>
+    </main>
+    <footer>
+        &copy; 2024 계산기 사이트
+    </footer>
+    <script src="tdee.js"></script>
+</body>
+</html>

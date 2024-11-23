@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <link rel="stylesheet" href="../share-css/common.css">
+</head>
+<body>
+        <main>
+            <h1>대한민국 급여 계산기</h1>
+            <form id="salaryForm">
+                <div class="form-group">
+                    <input type="number" id="hourlyWage" placeholder="시급 (₩)" min="0" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="dailyHours" placeholder="일일 근무 시간 (시간)" min="1" max="24" required>
+                </div>
+                <div class="form-group">
+                    <select id="workingDays">
+                        <option value="5">주간 근무일 (5일)</option>
+                        <option value="6">주간 근무일 (6일)</option>
+                        <option value="7">주간 근무일 (7일)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="deductInsurance"> 4대보험 공제 (9.32%)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="deductIncomeTax"> 소득세 공제 (3.3%)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <select id="calculationType">
+                        <option value="daily">일급 계산</option>
+                        <option value="weekly">주급 계산</option>
+                        <option value="monthly">월급 계산</option>
+                    </select>
+                </div>
+                <button type="button" onclick="calculateSalary()">계산하기</button>
+            </form>
+            <div id="result" class="result"></div>
+        </main>
+    <footer>
+        &copy; 2024 계산기 사이트
+    </footer>
+    <script src="salary.js"></script>
+</body>
+</html>
